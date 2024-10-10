@@ -2,12 +2,9 @@
 let gameName = "Guess The Word";
 document.title = gameName;
 document.body.firstElementChild.innerHTML = gameName;
-document.querySelector(
-  "footer"
-).innerHTML = `${gameName} Game Created By Elzero Web School`;
 
 // Setting Game Options
-let numbersOfTries = 4;
+let numbersOfTries = 5;
 let numbersOfLetters = 6;
 let currentTry = 1;
 let numberOfHints = 2;
@@ -17,12 +14,16 @@ let wordToGuess = "";
 const words = [
   "Create",
   "Update",
+  "Kuwait",
+  "Target",
   "Delete",
+  "Basket",
   "Master",
   "Branch",
-  "Mainly",
-  "Elzero",
+  "Screen",
+  "Future",
   "School",
+  "Engine",
 ];
 wordToGuess = words[Math.floor(Math.random() * words.length)].toLowerCase();
 let messageArea = document.querySelector(".message");

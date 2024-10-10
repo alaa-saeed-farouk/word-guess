@@ -10,18 +10,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
+  background-color: #009688;
+  color: white;
   text-align: center;
-  padding: 20px;
-  margin: 0 0 50px;
-  background-color: white;
+  padding: 15px;
+  margin: 0 0 30px;
 }
 .guess-game {
   text-align: center;
-  width: 1000px;
-  margin: 20px auto;
+  padding: 0 15px;
+  margin: 0px auto;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .guess-game .game-area .inputs > div {
   margin-bottom: 20px;
@@ -40,10 +41,10 @@ h1 {
 }
 .guess-game .game-area .inputs input {
   margin: 0 5px;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   text-align: center;
-  font-size: 50px;
+  font-size: 45px;
   caret-color: var(--primary-color);
   background-color: white;
   border: none;
@@ -71,8 +72,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  margin: 30px auto;
+  margin: 25px auto;
   gap: 10px;
 }
 .game-area .control .check {
@@ -96,6 +96,18 @@ h1 {
   background-color: black;
   opacity: 0.4;
   cursor: no-drop;
+}
+@media (max-width: 767px) {
+  .guess-game {
+    flex-direction: column;
+  }
+  .key-colors {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .key-colors h2 {
+    margin-top: 0;
+  }
 }
 .key-colors .key-color {
   display: flex;
@@ -123,6 +135,32 @@ h1 {
   font-size: 20px;
   font-weight: bold;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .guess-game .game-area .inputs > div span {
+    font-size: 25px;
+  }
+  .guess-game .game-area .inputs input {
+    width: 40px;
+    height: 40px;
+    font-size: 38px;
+  }
+  .key-colors .key-color .key-text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .guess-game .game-area .inputs > div span {
+    font-size: 25px;
+  }
+  .guess-game .game-area .inputs input {
+    width: 40px;
+    height: 40px;
+    font-size: 38px;
+  }
+  .key-colors .key-color .key-text {
+    font-size: 18px;
+  }
+}
 .message {
   text-align: center;
   font-weight: bold;
@@ -138,14 +176,4 @@ h1 {
 }
 .message p {
   margin-top: 15px;
-}
-footer {
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
 }
