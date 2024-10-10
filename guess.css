@@ -150,15 +150,15 @@ h1 {
 }
 @media (max-width: 575px) {
   .guess-game .game-area .inputs > div span {
-    font-size: 25px;
+    font-size: 16px;
   }
   .guess-game .game-area .inputs input {
-    width: 40px;
-    height: 40px;
-    font-size: 38px;
+    width: 35px;
+    height: 35px;
+    font-size: 34px;
   }
   .key-colors .key-color .key-text {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .message {
